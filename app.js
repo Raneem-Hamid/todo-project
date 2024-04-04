@@ -21,13 +21,13 @@ if (skip) {
 }
 
 
-let Questions = [];
-Questions[0] = prompt(" Do you speak English?");
-Questions[1] = prompt("Do you speak Turkish?");
-Questions[2] = prompt("Do you speak German?");
-
-for (let i = 0; i < 3; i++) {
-    switch (Questions[i]) {
+function answers(){
+let questions = [];
+questions[0] = prompt(" Do you speak English?");
+questions[1] = prompt("Do you speak Turkish?");
+questions[2] = prompt("Do you speak German?");
+    for (let i = 0; i < 3; i++) {
+    switch (questions[i]) {
         case "yes":
         case "y":
         case "YES":
@@ -41,9 +41,13 @@ for (let i = 0; i < 3; i++) {
         case "No":
             break;
         default:
-            Questions[i] = "invalid";
+            questions[i] = "invalid";
     }
 }
+console.log(questions); 
+}
 
-console.log(Questions);
+
+
+answers();
 
